@@ -8,8 +8,8 @@ public class Main {
         Teacher t3 = new Teacher("Petr", "Orlov","Petrovich", LocalDate.now());
         Teacher t4 = new Teacher("Alex", "Orlov","Petrovich", LocalDate.now());
 
-        TeacherGroup tg = new TeacherGroup(List.of(t1,t2,t3,t4));
+        TeacherGroup tg = new TeacherGroup(List.of(t1,t2,t3,t4), "Mathematic");
 
-        System.out.println(tg.getTeachers());
+        System.out.println(tg);
     }
 }
