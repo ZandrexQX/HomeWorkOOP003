@@ -4,7 +4,7 @@ public class StudentGroup implements Iterable<Student>{
     private List<Student> students;
     private Teacher teacher;
 
-    public StudentGroup(List<Student> students) {
+    public StudentGroup(List<Student> students, Teacher teacher) {
         this.students = students;
         this.teacher = teacher;
     }
