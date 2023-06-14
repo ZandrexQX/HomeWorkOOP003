@@ -1,26 +1,16 @@
 import java.time.LocalDate;
 
 public class Student extends User implements Comparable<Student>{
-    private static Long studentId;
-
-
-
+    private static Long counter = 1L;
+    private Long studentId;
     public Student(String firstName, String secondName,
                    String patronymic, LocalDate dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
-        studentId++;
+        this.studentId = counter++;
     }
-
     public Long getStudentId() {
         return studentId;
     }
-
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
-    }
-
-
-
     @Override
     public String toString() {
         return "Student{" +

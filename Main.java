@@ -3,13 +3,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Teacher t1 = new Teacher("Ivan", "Petrov","Petrovich", LocalDate.now());
-        Teacher t2 = new Teacher("Oleg", "Petrov","Petrovich", LocalDate.now());
-        Teacher t3 = new Teacher("Petr", "Orlov","Petrovich", LocalDate.now());
-        Teacher t4 = new Teacher("Alex", "Orlov","Petrovich", LocalDate.now());
+        Teacher t1 = new Teacher("Ivan", "Petrov",
+                "Petrovich", LocalDate.now());
+        Student s1 = new Student("Alex","Voronov",
+                "Ivanovich",LocalDate.now());
+        Student s2 = new Student("Ivan","Voronoi",
+                "Ivanovich",LocalDate.now());
+        Student s3 = new Student("Petr","Ivanov",
+                "Ivanovich",LocalDate.now());
 
-        TeacherGroup tg = new TeacherGroup(List.of(t1,t2,t3,t4), "Mathematic");
-
-        System.out.println(tg);
+        Controller c1 = new Controller(Arrays.asList(s1,s2,s3),t1);
+        Viewer.printStudentsId(c1);
+        Viewer.printTeacherId(c1);
     }
 }

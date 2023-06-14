@@ -3,11 +3,12 @@ import java.util.Comparator;
 
 public class Teacher extends User{
 
-    private static Long teacherId;
+    private static Long counter = 1L;
+    private Long teacherId;
 
     public Teacher(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
-        teacherId++;
+        this.teacherId = counter++;
     }
 
     public Long getTeacherId() {
