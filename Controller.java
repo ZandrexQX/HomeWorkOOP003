@@ -5,7 +5,14 @@ public class Controller {
     public Controller(List<Student> students, Teacher teacher){
         this.sgs = new StudentGroupService(students, teacher);
     }
-    public void studentsID(){
-
+    public List<Long> studentsID(){
+        List<Long> studentsID = null;
+        for (Student student:sgs.getSg().getStudents()) {
+            studentsID.add(student.getStudentId());
+        }
+        return studentsID;
+    }
+    public Long teacherID(){
+        return sgs.getTeacher().getTeacherId();
     }
 }

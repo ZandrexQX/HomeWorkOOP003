@@ -9,4 +9,7 @@ public class StudentGroupService {
     public StudentGroup getSg() {
         return sg;
     }
+    public Teacher getTeacher() {
+        return sg.getTeacher();
+    }
 }

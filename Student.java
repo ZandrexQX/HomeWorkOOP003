@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 public class Student extends User implements Comparable<Student>{
-    private static Long studentId = 0L;
+    private static Long studentId;
 
 
 

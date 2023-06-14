@@ -3,18 +3,15 @@ import java.util.Comparator;
 
 public class Teacher extends User{
 
-    private Long teacherId;
+    private static Long teacherId;
 
     public Teacher(String firstName, String secondName, String patronymic, LocalDate dateOfBirth) {
         super(firstName, secondName, patronymic, dateOfBirth);
+        teacherId++;
     }
 
     public Long getTeacherId() {
         return teacherId;
-    }
-
-    public void setTeacherId(Long teacherId) {
-        this.teacherId = teacherId;
     }
 
     public static class TeacherComparator implements Comparator {
